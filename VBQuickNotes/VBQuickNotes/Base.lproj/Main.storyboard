@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hqS-sx-Lte">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Quick Notes-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ty-tT-Mum">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="New Note" image="add_icon" selectedImage="add_icon" id="MuC-T2-QHa"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3zA-PI-MwQ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3zA-PI-MwQ" firstAttribute="leading" secondItem="5ty-tT-Mum" secondAttribute="leading" id="5ZE-Wz-FYU"/>
+                            <constraint firstItem="3zA-PI-MwQ" firstAttribute="bottom" secondItem="5ty-tT-Mum" secondAttribute="top" id="Nyn-ZY-wbX"/>
+                            <constraint firstAttribute="trailing" secondItem="5ty-tT-Mum" secondAttribute="trailing" id="XlJ-Jr-9zr"/>
+                            <constraint firstItem="3zA-PI-MwQ" firstAttribute="trailing" secondItem="5ty-tT-Mum" secondAttribute="trailing" id="Zc0-1y-uPB"/>
+                            <constraint firstItem="5ty-tT-Mum" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hTW-52-DsE"/>
+                            <constraint firstItem="5ty-tT-Mum" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="nNZ-gM-HaZ"/>
+                            <constraint firstItem="3zA-PI-MwQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="okB-Ws-cUl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Quick Notes" id="w18-Rz-jhO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="tabBar" destination="5ty-tT-Mum" id="nDC-Uh-aUt"/>
+                        <outlet property="tableView" destination="3zA-PI-MwQ" id="kPs-bK-YOR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="644" y="-376"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rMk-Tq-NT2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hqS-sx-Lte" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TpN-Te-DnS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Vo6-zD-sxg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JSa-mh-Ryt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253" y="-376"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add_icon" width="32" height="32"/>
+    </resources>
+</document>
