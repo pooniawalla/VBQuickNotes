@@ -31,6 +31,8 @@
     self.tabBar.delegate = self;
     
     self.tableView.delegate = self;
+    
+    // This is added by Venu: Haha
 }
 
 - (void)didReceiveMemoryWarning {
